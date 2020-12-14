@@ -5,7 +5,6 @@ import org.accordproject.cicero.runtime.* from https://models.accordproject.org/
 import org.accordproject.time.* from https://models.accordproject.org/v2.0/time.cto
 
 transaction MyRequest extends Request {
-  o DateTime dob
 }
 
 transaction MyResponse extends Response {
@@ -16,7 +15,7 @@ transaction MyResponse extends Response {
  * The model for the contract
  */
 asset MyContract extends AccordContract {
-  o String name
+  o AccordParty name
   o String email
   o Long mobile
   o String address

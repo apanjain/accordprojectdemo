@@ -20,7 +20,7 @@ contract MyLogic over MyContract {
   // Simple Clause
   clause reportAge(request : MyRequest) : MyResponse {
     let today = now();
-    let dob = request.dob;
+    let dob = contract.dob;
     let age = diffPeriodAs(today,dob,years);
     return MyResponse{age : age}
   }

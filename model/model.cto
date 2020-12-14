@@ -4,17 +4,17 @@ import org.accordproject.cicero.contract.* from https://models.accordproject.org
 import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
 import org.accordproject.time.* from https://models.accordproject.org/v2.0/time.cto
 
-transaction MyRequest extends Request {
+transaction AgeRequest extends Request {
 }
 
-transaction MyResponse extends Response {
+transaction AgeResponse extends Response {
   o Period age
 }
 
 /**
  * The model for the contract
  */
-asset MyContract extends AccordContract {
+asset ConsentContract extends AccordContract {
   o AccordParty name
   o String email
   o Long mobile

@@ -16,12 +16,12 @@ namespace org.apan.accorddemo
 
 import org.accordproject.time.*
 
-contract MyLogic over MyContract {
-  // Simple Clause
-  clause reportAge(request : MyRequest) : MyResponse {
+contract ConsentLogic over ConsentContract {
+  // Check Age
+  clause reportAge(request : AgeRequest) : AgeResponse {
     let today = now();
     let dob = contract.dob;
     let age = diffPeriodAs(today,dob,years);
-    return MyResponse{age : age}
+    return AgeResponse{age : age}
   }
 }

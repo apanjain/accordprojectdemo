@@ -1,0 +1,4 @@
+{
+    "$class": "org.apan.accorddemo.MyRequest",
+    "input": "World"
+}

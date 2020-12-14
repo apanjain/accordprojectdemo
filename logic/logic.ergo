@@ -14,9 +14,14 @@
 
 namespace org.apan.accorddemo
 
+import org.accordproject.time.*
+
 contract MyLogic over MyContract {
   // Simple Clause
-  clause helloworld(request : MyRequest) : MyResponse {
-    return MyResponse{ output: "Hello " ++ contract.name ++ " " ++ request.input }
+  clause reportAge(request : MyRequest) : MyResponse {
+    let today = now();
+    let dob = request.dob;
+    let age = diffPeriodAs(today,dob,years);
+    return MyResponse{age : age}
   }
 }

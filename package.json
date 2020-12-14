@@ -9,7 +9,6 @@
         "runtime": "ergo"
     },
     "devDependencies": {
-        "cucumber": "^5.1.0",
         "chai": "4.2.0",
         "@accordproject/cicero-cli": "^0.21.9"
     },

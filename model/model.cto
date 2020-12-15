@@ -9,7 +9,7 @@ transaction AgeRequest extends Request {
 }
 
 transaction AgeResponse extends Response {
-  o DateTime age optional
+  o Period age
 }
 
 /**
@@ -17,4 +17,5 @@ transaction AgeResponse extends Response {
  */
 asset ConsentContract extends AccordContract {
   o Person person
+  o DateTime dob
 }

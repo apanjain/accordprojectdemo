@@ -12,8 +12,8 @@
       "postalCode":"457856"
     },
     "email": "thor@sonofodin.com",
-    "telephone": "1234567890",
-    "birthDate": "1990-06-18T00:00:00.000+05:30"
+    "telephone": "1234567890"
   },
+  "dob": "1990-06-18T00:00:00.000+05:30",
   "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"
 }

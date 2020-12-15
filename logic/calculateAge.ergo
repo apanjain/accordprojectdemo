@@ -12,17 +12,12 @@
  * limitations under the License.
  */
 
-namespace org.apan.accorddemo
+namespace org.apan.age.accorddemo
 
 import org.accordproject.time.*
-import org.apan.age.accorddemo.*
 
-contract ConsentLogic over ConsentContract {
-  // Check Age
-  clause reportAge(request : AgeRequest) : AgeResponse {
+define function calculateAge(dob: DateTime) : Period {
     let today = now();
-    let dob = contract.dob;
-    let age = calculateAge(dob);
-    return AgeResponse{age : age}
-  }
+    let age = diffPeriodAs(today,dob,years);
+    return Period{amount:age.amount, unit:age.unit}
 }

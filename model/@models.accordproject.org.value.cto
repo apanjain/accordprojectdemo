@@ -12,16 +12,52 @@
  * limitations under the License.
  */
 
-namespace org.apan.accorddemo
+namespace org.accordproject.value
 
-import org.accordproject.time.*
+/**
+ * http://schema.org/QuantitativeValue
+ */
+concept QuantitativeValue {
+  o String unitCode
+  o String unitText optional
+  o Double value
+}
 
-contract ConsentLogic over ConsentContract {
-  // Check Age
-  clause reportAge(request : AgeRequest) : AgeResponse {
-    let today = now();
-    let dob = contract.person.birthDate;
-    // let age = diffPeriodAs(today,dob,years);/
-    return AgeResponse{age : dob}
-  }
+/**
+ * SI units of mass
+ */
+enum UnitOfMass {
+  o GRAM
+  o KG
+  o TONNE
+}
+
+/**
+ * Units of Length
+ */
+enum UnitOfLength {
+  o METER
+}
+
+/**
+ * Units of Density
+ */
+enum UnitOfDensity {
+  o KG_PER_CUBIC_METER
+}
+
+/**
+ * Units of Volume
+ */
+enum UnitOfVolume {
+  o CUBIC_METER
+}
+
+/**
+ * Units of Temperature
+ */
+enum UnitOfTemperature {
+  o KELVINS
+  o CELSIUS
+  o FAHRENHEIT
 }

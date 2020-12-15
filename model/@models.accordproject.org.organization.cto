@@ -12,16 +12,15 @@
  * limitations under the License.
  */
 
-namespace org.apan.accorddemo
+namespace org.accordproject.organization
 
-import org.accordproject.time.*
+import org.accordproject.address.PostalAddress from https://models.accordproject.org/address.cto
+import org.accordproject.geo.Place from https://models.accordproject.org/geo.cto
 
-contract ConsentLogic over ConsentContract {
-  // Check Age
-  clause reportAge(request : AgeRequest) : AgeResponse {
-    let today = now();
-    let dob = contract.person.birthDate;
-    // let age = diffPeriodAs(today,dob,years);/
-    return AgeResponse{age : dob}
-  }
+participant Organization identified by identifier {
+  o String identifier
+  o String name optional 
+  o String description optional
+  o String duns optional
+  o Place place optional
 }

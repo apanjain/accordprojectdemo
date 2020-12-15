@@ -1,12 +1,17 @@
 {
-  "$class": "org.apan.accorddemo.MyContract",
+  "$class": "org.apan.accorddemo.ConsentContract",
   "name": {
     "$class": "org.accordproject.cicero.contract.AccordParty",
     "partyId": "Thor"
   },
+  "address":{
+    "$class" : "org.accordproject.address.PostalAddress",
+    "streetAddress":"King's Palace",
+    "addressCountry" : "Asgard",
+    "postalCode":"457856"
+  },
   "email": "thor@sonofodin.com",
   "mobile": 1234567890,
-  "address": "Asgard",
   "company": "Avengers",
   "dob": "1990-06-18T00:00:00.000+05:30",
   "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"

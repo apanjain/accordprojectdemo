@@ -3,6 +3,7 @@ namespace org.apan.accorddemo
 import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
 import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
 import org.accordproject.time.* from https://models.accordproject.org/v2.0/time.cto
+import org.accordproject.address.* from https://models.accordproject.org/address.cto
 
 transaction AgeRequest extends Request {
 }
@@ -17,8 +18,8 @@ transaction AgeResponse extends Response {
 asset ConsentContract extends AccordContract {
   o AccordParty name
   o String email
-  o Long mobile
-  o String address
+  o String mobile
+  o PostalAddress address
   o String company
   o DateTime dob
 }

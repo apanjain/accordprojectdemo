@@ -4,30 +4,35 @@
  This project provides a simple template for a person's data, and determines his/her age from given DoB.
 
 ## Setup
-- Install [Cicero](https://docs.accordproject.org/docs/started-installation.html).
-- Clone this repository.
+- Clone this repository
 - cd into the directory
+
 ```shell
 cd accordprojectdemo/
+```
+
+- run the following command
+```shell
+npm install
 ```
 
 ## Usage
 - There is sample contract data present in sample.md.
 - Run the following command and the output will be a JSON object containing age value.
 ```shell
-cicero trigger
+npx cicero trigger
 ```
 
 - To extract the data from contract text.
 ```shell
-cicero parse --output data.json
+npx cicero parse --output data.json
 ```
 
 - To update the contract text data there are two ways
   - Change the data directly in text/sample.md OR
   - Update data.json then draft the contract text using
   ```shell
-  cicero draft --output text/sample.md
+  npx cicero draft --output text/sample.md
   ```
 
 # Description

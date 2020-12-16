@@ -5,7 +5,7 @@ My mobile number is "1234567890".
 {{/clause}}
 
 {{#clause ageClause}}
-My age is 06/18/1990
+My age is {{%years 30%}}
 {{/clause}}
 
 I hereby confirm that the above information provided by me is correct to my knowledge.

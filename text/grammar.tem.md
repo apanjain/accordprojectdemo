@@ -5,7 +5,7 @@ My mobile number is {{mobile}}.
 {{/clause}}
 
 {{#clause ageClause}}
- My age is {{%calculateAge(dob)%}}
+ My age is {{%calculateAge(ageClause.dob)%}}
 {{/clause}}
 
 I hereby confirm that the above information provided by me is correct to my knowledge.

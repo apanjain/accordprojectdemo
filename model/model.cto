@@ -3,7 +3,8 @@ namespace org.apan.accorddemo
 import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
 import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
 import org.accordproject.time.* from https://models.accordproject.org/v2.0/time.cto
-import org.accordproject.person.* from https://models.accordproject.org/person.cto
+import org.accordproject.address.* from https://models.accordproject.org/address.cto
+
 
 transaction AgeRequest extends Request {
 }
@@ -12,10 +13,21 @@ transaction AgeResponse extends Response {
   o Period age
 }
 
+transaction DetailRequest extends Request {
+}
+
+transaction DetailResponse extends Response {
+  o String givenName
+}
+
 /**
  * The model for the contract
  */
 asset ConsentContract extends AccordContract {
-  o Person person
+  o String givenName
+  o String familyName optional
+  o String email regex=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  o String mobile regex=/^(\+\d{1,3}[- ]?)?\d{10}$/
+  o PostalAddress address
   o DateTime dob
 }

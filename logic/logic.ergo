@@ -18,10 +18,13 @@ import org.accordproject.time.*
 import org.apan.age.accorddemo.*
 
 contract ConsentLogic over ConsentContract {
+  clause detailsClause(request: DetailRequest) : DetailResponse {
+    return DetailResponse{givenName : clause.givenName}
+  }
   // Check Age
-  clause reportAge(request : AgeRequest) : AgeResponse {
+  clause ageClause(request : AgeRequest) : AgeResponse {
     let today = now();
-    let dob = contract.dob;
+    let dob = clause.dob;
     let age = calculateAge(dob);
     return AgeResponse{age : age}
   }

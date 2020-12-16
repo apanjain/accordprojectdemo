@@ -1,15 +1,23 @@
 {
   "$class": "org.apan.accorddemo.ConsentContract",
-  "givenName":"Thor",
-  "familyName" : "Son of Odin",
-  "address":{
-    "$class" : "org.accordproject.address.PostalAddress",
-    "streetAddress":"King's Palace",
-    "addressCountry" : "Asgard",
-    "postalCode":"457856"
+  "detailsClause":{
+    "$class": "org.apan.accorddemo.DetailsClause",
+    "givenName":"Thor",
+    "familyName" : "Son of Odin",
+    "address":{
+      "$class" : "org.accordproject.address.PostalAddress",
+      "streetAddress":"King's Palace",
+      "addressCountry" : "Asgard",
+      "postalCode":"457856"
+    },
+    "email": "thor@sonofodin.com",
+    "mobile": "1234567890",
+    "clauseId": "db807dfd-8b71-4637-9979-d6085f36ca0f"
   },
-  "email": "thor@sonofodin.com",
-  "mobile": "1234567890",
-  "dob": "1990-06-18T00:00:00.000+05:30",
+  "ageClause":{
+    "$class": "org.apan.accorddemo.AgeClause",
+    "dob": "1990-06-18T00:00:00.000+05:30",
+    "clauseId": "db807dfd-8b71-4637-9979-d6085f36ca0e"
+  },
   "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"
 }
